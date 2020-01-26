@@ -324,7 +324,7 @@ public class Map extends JPanel {
                 g.drawString(MSG_HUM_PL2_WIN,65,getHeight()/2);
                 break;
             default:
-                throw new RuntimeException("Unknown gameover stat :" + stateGAmeOver);
+                throw new RuntimeException("Unknown game over stat :" + stateGAmeOver);
 
         }
     }
