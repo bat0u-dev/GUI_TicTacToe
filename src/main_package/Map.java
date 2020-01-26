@@ -212,7 +212,7 @@ public class Map extends JPanel {
             }
         }
         if (isGameOver) {
-//            showFinalMessage(g);
+            showFinalMessage(g);
             System.out.println("Конец игры");// компонент отладки. После отладки УДАЛИТЬ!!!
         }
     }
@@ -314,6 +314,14 @@ public class Map extends JPanel {
             case STATE_HUM_WIN:
                 g.setFont(new Font("Times new roman", Font.BOLD, 46));
                 g.drawString(MSG_HUM_WIN, 100, getHeight() / 2);
+                break;
+            case STATE_PL1_WIN:
+                g.setFont(new Font("Times new roman", Font.BOLD, 46));
+                g.drawString(MSG_HUM_PL1_WIN,65,getHeight()/2);
+                break;
+            case STATE_PL2_WIN:
+                g.setFont(new Font("Times new roman", Font.BOLD, 46));
+                g.drawString(MSG_HUM_PL2_WIN,65,getHeight()/2);
                 break;
             default:
                 throw new RuntimeException("Unknown gameover stat :" + stateGAmeOver);
